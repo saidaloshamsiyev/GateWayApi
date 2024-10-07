@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: ApiGateway
+  cloud:
+    gateway:
+      routes:
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**
+        - id: CHAT-SERVICE
+          uri: lb://CHAT-SERVICE
+          predicates:
+            - Path=/api/chat/**
+        - id: MESSAGE-SERVICE
+          uri: lb://MESSAGE-SERVICE
+          predicates:
+            - Path=/api/message/**
+        - id: CONTACT-SERVICE
+          uri: lb:/CONTACT-SERVICE
+          predicates:
+            - Path=/api/contact/**
+        - id: STORY-SERVICE
+          uri: lb:/STORY-SERVICE
+          predicates:
+            - Path=/api/story/**
+      default-filters:
+        - name: JwtFilter
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://${EUREKA_HOST:localhost}:8761/eureka/}
+  instance:
+    preferIpAddress: true
+
+jwt:
+  secret: salomalaykumzurmisz44nimala5qivossz442enndi
+
+
