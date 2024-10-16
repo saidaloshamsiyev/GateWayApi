@@ -22,11 +22,11 @@ spring:
           predicates:
             - Path=/api/message/**
         - id: CONTACT-SERVICE
-          uri: lb:/CONTACT-SERVICE
+          uri: lb://CONTACT-SERVICE
           predicates:
             - Path=/api/contact/**
         - id: STORY-SERVICE
-          uri: lb:/STORY-SERVICE
+          uri: lb://STORY-SERVICE
           predicates:
             - Path=/api/story/**
       default-filters:
@@ -40,6 +40,6 @@ eureka:
     preferIpAddress: true
 
 jwt:
-  secret: salomalaykumzurmisz44nimala5qivossz442enndi
+  secret: vn54uignvurigh8gt9vetrghnu5gieuirgnerj5i5
 
 
