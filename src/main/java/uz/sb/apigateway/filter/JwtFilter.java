@@ -42,8 +42,8 @@ public class JwtFilter extends AbstractGatewayFilterFactory<JwtFilter.Config> {
                 String roles = claims.get("roles").toString();
 
                 exchange.getRequest().mutate()
-                        .header("X-username", username)
-                        .header("X-roles", "ROLE_" + roles)
+                        .header("Authorization", username)
+//                        .header("X-roles", "ROLE_" + roles)
                         .build();
             } catch (Exception e) {
                 throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid JWT token");
