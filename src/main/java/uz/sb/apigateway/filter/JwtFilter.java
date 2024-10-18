@@ -39,10 +39,10 @@ public class JwtFilter extends AbstractGatewayFilterFactory<JwtFilter.Config> {
                 Claims claims = jwtService.parseToken(token);
 
                 String username = claims.getSubject();
-                String roles = claims.get("roles").toString();
+               /* String roles = claims.get("roles").toString();*/
 
                 exchange.getRequest().mutate()
-                        .header("Authorization", username)
+                        .header("X-Username", username)
 //                        .header("X-roles", "ROLE_" + roles)
                         .build();
             } catch (Exception e) {
