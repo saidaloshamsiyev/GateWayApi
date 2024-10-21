@@ -13,22 +13,6 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/api/auth/**
-        - id: CHAT-SERVICE
-          uri: lb://CHAT-SERVICE
-          predicates:
-            - Path=/api/chat/**
-        - id: MESSAGE-SERVICE
-          uri: lb://MESSAGE-SERVICE
-          predicates:
-            - Path=/api/message/**
-        - id: CONTACT-SERVICE
-          uri: lb://CONTACT-SERVICE
-          predicates:
-            - Path=/api/contact/**
-        - id: STORY-SERVICE
-          uri: lb://STORY-SERVICE
-          predicates:
-            - Path=/api/story/**
       default-filters:
         - name: JwtFilter
 
@@ -40,6 +24,6 @@ eureka:
     preferIpAddress: true
 
 jwt:
-  secret: vn54uignvurigh8gt9vetrghnu5gieuirgnerj5i5
+  secret: qwefklsdfj3roif134adsj14fdslkjf1234fiodwq
 
 
