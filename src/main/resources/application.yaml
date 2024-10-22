@@ -5,7 +5,7 @@ spring:
   main:
     web-application-type: reactive
   application:
-    name: ApiGateway
+    name: API-GATEWAY
   cloud:
     gateway:
       routes:

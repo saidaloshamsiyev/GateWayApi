@@ -1,7 +1,6 @@
 package uz.sb.apigateway.filter;
 
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtException;
 import org.apache.http.HttpHeaders;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
