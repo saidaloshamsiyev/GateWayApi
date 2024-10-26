@@ -30,7 +30,6 @@ public class JwtFilter extends AbstractGatewayFilterFactory<JwtFilter.Config> {
         return (exchange, chain) -> {
             String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
                 return chain.filter(exchange);
             }
 
