@@ -13,12 +13,11 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/api/auth/**
-            - Path=/api/subscribe/**
-
         - id: CHANNEL-SERVICE
           uri: lb://CHANNEL-SERVICE
           predicates:
             - Path=/api/channel/**
+            - Path=/api/subscribe/**
       default-filters:
         - name: JwtFilter
 
