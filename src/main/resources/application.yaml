@@ -17,7 +17,7 @@ spring:
           uri: lb://CHANNEL-SERVICE
           predicates:
             - Path=/api/channel/**
-            - Path=/api/subscribe/**
+
       default-filters:
         - name: JwtFilter
 
