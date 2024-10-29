@@ -17,6 +17,10 @@ spring:
           uri: lb://CHANNEL-SERVICE
           predicates:
             - Path=/api/channel/**
+        - id: INTERACTION-SERVICE
+          uri: lb://INTERACTION-SERVICE
+          predicates:
+            - Path=/api/commit/**
 
       default-filters:
         - name: JwtFilter
