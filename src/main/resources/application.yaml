@@ -24,6 +24,14 @@ spring:
       default-filters:
         - name: JwtFilter
 
+#      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "http://localhost:3000, http://159.65.119.240:8080, http://localhost:3001"
+#            allowedMethods: "GET, POST, PUT, DELETE, OPTIONS"
+#            allowedHeaders: "*"
+#            allowCredentials: true
+
 eureka:
   client:
     service-url:
@@ -33,10 +41,9 @@ eureka:
 
 springdoc:
   swagger-ui:
-    path: /api/auth/swagger-ui
-    config-url: "http://159.65.119.240:8080/api/**"
+    path: /api/swagger-ui
+    config-url: "http://159.65.119.240:8080/api/v3/api-docs"  # Umumiy URL
   api-docs:
-    path: /api/auth/v3/api-docs
-
+    path: /api/v3/api-docs
 jwt:
   secret: qwefklsdfj3roif134adsj14fdslkjf1234fiodwq
