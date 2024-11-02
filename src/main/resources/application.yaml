@@ -33,13 +33,12 @@ eureka:
     preferIpAddress: true
 
 
+
 springdoc:
   swagger-ui:
     path: /api/auth/swagger-ui
-    config-url: "http://159.65.119.240:8080/api/auth/v3/api-docs"  # AUTH-SERVICE uchun to'g'ri API docs URL
   api-docs:
-    path: /api/auth/v3/api-docs  # AUTH-SERVICE uchun to'g'ri API docs
-
+    path: /api/auth/v3/api-docs
 
 
 jwt:
