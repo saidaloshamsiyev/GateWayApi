@@ -21,10 +21,8 @@ spring:
           uri: lb://INTERACTION-SERVICE
           predicates:
             - Path=/api/commit/**
-
       default-filters:
         - name: JwtFilter
-
 
 eureka:
   client:
@@ -36,13 +34,9 @@ eureka:
 springdoc:
   swagger-ui:
     path: /api/auth/swagger-ui
+    config-url: "http://159.65.119.240:8080/api/**"
   api-docs:
     path: /api/auth/v3/api-docs
 
-
-
-
 jwt:
   secret: qwefklsdfj3roif134adsj14fdslkjf1234fiodwq
-
-
