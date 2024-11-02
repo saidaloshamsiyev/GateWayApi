@@ -32,6 +32,8 @@ public class WebConfig implements WebMvcConfigurer {
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/api/**", corsConfiguration);
+        source.registerCorsConfiguration("/v3/api-docs/**", corsConfiguration); // Swagger UI uchun
+        source.registerCorsConfiguration("/swagger-ui/**", corsConfiguration); // Swagger UI uchun
         return source;
     }
 }
