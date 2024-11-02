@@ -26,17 +26,6 @@ spring:
         - name: JwtFilter
 
 
-  cloud:
-    gateway:
-      globalcors:
-        add-to-simple-url-handler-mapping: true
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:8080", "http://localhost:3000", "http://159.65.119.240:8080","http://localhost:3001"
-            allowedMethods: "*"
-            allowedHeaders: "*"
-            allowCredentials: true
-
 eureka:
   client:
     service-url:
