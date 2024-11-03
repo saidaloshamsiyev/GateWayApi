@@ -24,6 +24,10 @@ spring:
       default-filters:
         - name: JwtFilter
 
+      discovery:
+        locator:
+          enabled: true
+
 
 eureka:
   client:
