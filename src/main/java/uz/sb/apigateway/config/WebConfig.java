@@ -35,10 +35,7 @@ public class WebConfig {
         return corsConfiguration;
     }
 
-    @Bean
-    public OpenAPI customOpenAPI() {
-        return new OpenAPI()
-                .addServersItem(new Server().url("http://159.65.119.240:8080/api"));
-    }
+
+
 }
 
