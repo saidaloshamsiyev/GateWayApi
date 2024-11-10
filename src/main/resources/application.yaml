@@ -55,9 +55,8 @@ eureka:
 
 springdoc:
   swagger-ui:
-    path: /swagger-ui.html
-  api-docs:
-    path: /v3/api-docs
+    config-url: /v3/api-docs/swagger-config
+    url: /swagger-ui.html
 
 
 jwt:
