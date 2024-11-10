@@ -6,23 +6,19 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-import java.util.Arrays;
-import java.util.List;
-
 @Configuration
-public class GatewayCorsConfig {
+public class CorsConfig {
 
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("*"));  // Frontend manzilingizni qo'shing
-        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token", "token"));
-        config.setAllowCredentials(true);
+        config.addAllowedOrigin("*"); // All origins are allowed
+        config.addAllowedHeader("*"); // All headers are allowed
+        config.addAllowedMethod("*"); // All HTTP methods are allowed
 
-        source.registerCorsConfiguration("/**", config);
+        source.registerCorsConfiguration("/**", config); // Apply CORS configuration to all paths
         return new CorsFilter(source);
     }
 }

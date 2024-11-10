@@ -53,11 +53,6 @@ eureka:
     preferIpAddress: true
 
 
-springdoc:
-  swagger-ui:
-    config-url: /v3/api-docs/swagger-config
-    url: /swagger-ui.html
-
 
 jwt:
   secret: qwefklsdfj3roif134adsj14fdslkjf1234fiodwq
