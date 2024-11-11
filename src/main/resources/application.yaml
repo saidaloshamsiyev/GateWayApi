@@ -48,14 +48,14 @@ spring:
       default-filters:
         - name: JwtFilter
 
-      discovery:
-        locator:
-          enabled: true
+      #      discovery:
+      #        locator:
+      #          enabled: true
 
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOriginPatterns: "*"   # "*" orqali barcha domenlarga ruxsat berish
             allowedMethods: "*"
             allowedHeaders: "*"
             allowCredentials: true
