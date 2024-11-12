@@ -13,14 +13,6 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/api/auth/**
-        - id: AUTH-SERVICE-API-DOCS
-          uri: lb://AUTH-SERVICE
-          predicates:
-            - Path=/api/auth/v3/api-docs/**
-        - id: AUTH-SERVICE-SWAGGER
-          uri: lb://AUTH-SERVICE
-          predicates:
-            - Path=/api/auth/swagger-ui/**
         - id: CHANNEL-SERVICE
           uri: lb://CHANNEL-SERVICE
           predicates:
@@ -58,7 +50,7 @@ spring:
             allowedOriginPatterns: "*"   # "*" orqali barcha domenlarga ruxsat berish
             allowedMethods: "*"
             allowedHeaders: "*"
-            allowCredentials: true
+            allowCredentials: false
 
 
 eureka:
@@ -68,11 +60,11 @@ eureka:
   instance:
     preferIpAddress: true
 
-#
-#springdoc:
-#  swagger-ui:
-#    config-url: /v3/api-docs/swagger-config
-#    url: /swagger-ui.html
+
+springdoc:
+  swagger-ui:
+    config-url: /v3/api-docs/swagger-config
+    url: /swagger-ui.html
 
 
 jwt:
